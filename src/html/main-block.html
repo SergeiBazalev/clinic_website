@@ -1,0 +1,242 @@
+<main class="main">
+      <section class="main__slider slider">
+         <div class="slider__container">
+         <div class="wrapper">
+            <div class="slider__nav">
+               <div class="slider__buttons">
+                  <button class="slider__button" data-slide-index="0">Текст текст</button>
+                  <div class="slider__delimeter"></div>
+                  <button class="slider__button" data-slide-index="1">Текст текст текст</button>
+                  <div class="slider__delimeter"></div>
+                  <button class="slider__button" data-slide-index="2">Текст текст</button>
+                  <div class="slider__delimeter"></div>
+                  <button class="slider__button" data-slide-index="3">Текст текст</button>
+                  <div class="slider__delimeter"></div>
+                  <button class="slider__button" data-slide-index="4">Текст текст</button>
+                  <div class="slider__delimeter"></div>
+                  <button class="slider__button" data-slide-index="5">Текст текст</button>
+                  
+               </div>
+               <div class="slider__search">
+                  <img src="@img/icons/main/search.svg" alt="Поиск">
+               </div>
+            </div>
+         </div>
+         </div>
+         @@include('slider.html', {}) 
+      </section> 
+      <section class="main__cards cards">
+         <div class="wrapper">
+            <div class="cards__container">
+               <h2 class="cards__title">Заголовок заголовок заголовок</h2>
+               <div class="cards__row">
+                  <div class="cards__colomns">
+                     <div class="cards__item">
+                        <div class="cards__img">
+                           <img src="@img/icons/main/apointment/machine.svg" alt="Аппарат">
+                        </div>
+                        <p class="cards__text uppercase">
+                           Текст <span class="green-600">Текст текст</span> Текст текст Текст
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="cards__colomns">
+                     <div class="cards__item">
+                        <div class="cards__img">
+                           <img src="@img/icons/main/apointment/lenses.svg" alt="icon">
+                        </div>
+                        <p class="cards__text uppercase">
+                           Текст Текст Текст Текст Текст<br>
+                           Текст Текст<br> Текст Текст Текст 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="cards__colomns">
+                     <div class="cards__item">
+                        <div class="cards__img">
+                           <img src="@img/icons/main/apointment/eye.svg" alt="icon">
+                        </div>
+                        <p class="cards__text uppercase">
+                           Текст Текст Текст<br> Текст 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="cards__colomns">
+                     <div class="cards__item">
+                        <div class="cards__img">
+                           <img src="@img/icons/main/apointment/man.svg" alt="icon">
+                        </div>
+                        <p class="cards__text uppercase">
+                           Текст Текст Текст Текст<br> Текст Текст<br> Текст Текст 
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="cards__colomns">
+                     <div class="cards__item">
+                        <div class="cards__img">
+                           <img src="@img/icons/main/apointment/glasses.svg" alt="icon">
+                        </div>
+                        <p class="cards__text uppercase">
+                           <span class="green-600">Текст Текст Текст</span>,<br> Текст Текст Текст Текст<br> Текст Текст 
+ 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="cards__colomns">
+                     <div class="cards__item">
+                        <div class="cards__img">
+                           <img src="@img/icons/main/apointment/woman.svg" alt="icon">
+                        </div>
+                        <p class="cards__text uppercase">
+                           Текст<br> Текст Текст Текст<br> Текст Текст 
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <button class="cards__button custom-button" data-fancybox data-src="#popupForm">
+                  <p class="custom-button__button-caption uppercase">Записаться на проверку</p>
+                  <div class="custom-button__icon">
+                     <img src="@img/icons/main/arrow-btn.svg" alt="Стрелка">
+                  </div>
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <section class="main__test test">
+         <div class="wrapper">
+            <div class="test__container">
+               <div class="test__content">
+                  <h2 class="test__title">Текст текст:</h2>
+                  <ul class="test__items">
+                     <li class="test__item">текст текст</li>
+                     <li class="test__item">текст текст текст текст</li>
+                     <li class="test__item">текст</li>
+                     <li class="test__item">текст текст текст текст текст текст текст текст текст текст текст текст</li>
+                     <li class="test__item">текст текст текст текст текст текст текст текст текст текст</li>
+                     <li class="test__item">текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</li>
+                  </ul>
+               </div>
+               <div class="test__img" >
+                  <a href="@img/photos/machine.png" class="fancybox" data-fancybox data-caption="Проверка зрения">
+                     <img src="@img/photos/machine.png" alt="Проверка зрения" class="zoomable-image" id="myPanzoom">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="main__questions questions">
+         <div class="wrapper">
+            <h2 class="questions__title">Заголовок</h2>
+            <div class="questions__row owl-carousel">
+               <div class="questions__colomns">
+                  <div class="questions__item">
+                     <a href="@img/photos/ellipses/ellipse_doctor.png" class="fancybox" data-fancybox data-caption="Наши врача">
+                        <div class="questions__img">
+                           <img src="@img/photos/ellipses/ellipse_doctor.png" alt="Вопрос">
+                           <img class="questions__ellipse" src="@img/photos/ellipses/ellipse_doctor_green.svg" alt="ellips">
+                        </div>
+                     </a>
+                     <div class="questions__content">
+                        <h3 class="questions__subtitle">Вопрос вопрос вопрос?</h3>
+                        <p class="questions__text">
+                           Текст текст текст текс
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="questions__colomns">
+                  <div class="questions__item">
+                     <a href="@img/photos/ellipses/ellipse_machine.png" class="fancybox" data-fancybox data-caption="Наше оборудование">
+                        <div class="questions__img">
+                           <img src="@img/photos/ellipses/ellipse_machine.png" alt="Вопрос">
+                           <img class="questions__ellipse" src="@img/photos/ellipses/ellipse_machine_green.svg" alt="ellips">
+                        </div>
+                     </a>
+                     <div class="questions__content">
+                        <h3 class="questions__subtitle">Вопрос вопрос вопрос?</h3>
+                        <p class="questions__text">
+                           Текст текст текст текс
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="questions__colomns">
+                  <div class="questions__item">
+                     <a href="@img/photos/ellipses/ellipse_glasses.png" class="fancybox" data-fancybox data-caption="Какие-то специальные очки">
+                        <div class="questions__img">
+                           <img src="@img/photos/ellipses/ellipse_glasses.png" alt="Вопрос">
+                           <img class="questions__ellipse" src="@img/photos/ellipses/ellipse_glasses_green.svg" alt="ellips">
+                        </div>
+                     </a>
+                     <div class="questions__content">
+                        <h3 class="questions__subtitle">Вопрос вопрос вопрос?</h3>
+                        <p class="questions__text">
+                           <span class="questions__text_bold">Текст</span> Текст Текст Текст Текст Текст Текст Текст Текст Текст*
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <p class="questions__caption">
+               *текст текст текст текст текст текст
+               текст текст текст текст текст текст
+               текст текст текст текст текст текст
+               текст текст текст текст текст текст текст 
+               текст текст текст текст текст текст.
+            </p>
+         </div>
+      </section>
+
+      <section class="main__answers answers">
+         <div class="wrapper">
+            <div class="answers__content">
+               <div class="answers__text">
+                  <h2 class="answers__title">
+                     Вопрос вопрос вопрос вопрос вопрос вопрос вопрос?
+                  </h2>
+                  <ol class="answers__list">
+                     <li>
+                        Текст текст текст текст текст текст текст текст текст текст 
+                     </li>
+                     <li>
+                        Текст текст текст текст текст текст текст 
+                     </li>
+                     <li>
+                        Текст текст текст текст текст текст текст текст 
+                     </li>
+                     <li>
+                        Текст текст текст текст текст текст текст текст текст текст 
+                     </li>
+                     <li>
+                        Текст текст текст текст текст текст текст 
+                     </li>
+                  </ol>
+                  <p class="answers__caption">
+                     Текст текст текст текст текст текст текст текст текст текст текст текст
+                     текст текст текст текст текст текст текст текст текст текст текст текст
+                     текст текст текст текст текст текст текст текст текст текст текст текст
+                     текст текст текст текст текст текст текст текст текст текст текст текст
+                  </p>
+               </div>
+               <div class="answers__photo">
+                  <a href="@img/photos/eyesight_check.png" class="fancybox" data-fancybox data-caption="Проверка зрения">
+                     <img src="@img/photos/eyesight_check.png" alt="Проверка зрения">
+                  </a>
+               </div>
+            </div>
+            <button class="answers__button custom-button">
+               <p class="custom-button__button-caption uppercase" data-fancybox data-src="#popupForm">Записаться на проверку</p>
+               <div class="custom-button__icon">
+                  <img src="@img/icons/main/arrow-btn.svg" alt="Стрелка">
+               </div>
+            </button>
+         </div>
+      </section>
+   </div>
+</main>   
+
+

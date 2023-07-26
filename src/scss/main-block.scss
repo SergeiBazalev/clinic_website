@@ -1,0 +1,381 @@
+
+
+.slider {
+
+   &__container {
+      background-color: $green-300;
+   }
+   &__nav {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__buttons {
+      flex-basis: 90%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+   }
+
+   &__button {
+      background-color: transparent;
+      color: $white;
+      padding: 5px 10px;
+   }
+
+   &__delimeter {
+      width: 1px;
+      height: 20px;
+      background-color: $gray-900;
+   }
+
+   &__search {
+      flex-basis: 10%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+   }
+}
+
+@media screen and (max-width: 768px) { 
+   .slider {
+      &__nav {
+         display: none;
+      }      
+   }
+}
+
+
+
+.cards {
+   --cirlce-size: 84px;
+
+   padding-bottom: 60px;
+
+   &__title {
+      font-size: $fs-28;
+      font-weight: $fw-700;
+      line-height: 36px;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+   }
+
+   &__row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+   }
+
+   &__colomns {
+      
+      min-width: 300px;
+      height: 190px;
+      flex: 1 1 31%;
+      margin-top: calc(var(--cirlce-size) / 2);
+      
+      background-color: $gray-200;
+      border-radius: 15px;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   &__img {
+      width: var(--cirlce-size);
+      height: var(--cirlce-size);
+      border-radius: 50%;
+      border: 10px solid $white;
+      background-color: $green-500;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      transform: translateY(-50%);
+   }
+
+   &__text {
+      padding: 0 35px;
+      font-size: $fs-18;
+      font-weight: $fw-700;
+      line-height: 30px;
+      text-align: center;
+      margin-top: -23px;
+   }
+
+   &__button {
+      margin: 30px auto 0;
+   }
+
+  
+
+   @media screen and (max-width: 576px) {
+      .cards{
+         padding-bottom: 60px;
+         &__row {
+            gap: 15px;
+         }
+
+         &__title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+         }
+      }
+   }
+}
+
+.test {
+   padding-bottom: 60px;
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__title {
+      font-size: $fs-28;
+      font-weight: $fw-700;
+      line-height: 36px;
+   }
+
+   &__items {
+      padding-left: 20px;
+   }
+
+   &__item {
+      font-size: $fs-18;
+      line-height: 30px;
+      &:before {
+         content: '\2022';
+         margin-right: 8px; 
+      }
+   }
+
+   &__img {
+      flex-shrink: 0;
+      padding-left: 30px;
+      img {
+         max-width: 100%;
+         height: 246px;
+         object-fit: cover;
+      }
+      
+   }
+
+   @media screen and (max-width: 768px) {
+      .test {
+         &__container {
+            flex-direction: column;
+            align-items: center;
+         }
+         &__content {
+            order: 2;
+         }
+         &__img {
+            margin-bottom: 10px;    
+            padding-left: 0;       
+         }
+         
+      }
+   }
+}
+
+
+.questions {
+   background-color: $gray-200;
+   padding: 50px 0 60px;
+
+   &__title {
+      font-size: $fs-28;
+      font-weight: $fw-700;
+      line-height: 36px;
+      margin-bottom: 30px;
+   }
+
+   &__row {
+      display: flex;
+      
+      gap: 29px;
+   }
+
+   &__colomns {
+      flex: 0 1 33.333333%;
+   }
+
+   &__item {
+      width: 370px;
+      height: 331px;
+      border-radius: 8px; 
+      overflow: hidden;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+   }
+
+   &__img {
+      display: flex;
+      height: 180px;
+      align-items: end;
+      justify-content: center;
+      position: relative;
+      background-color: $gray-400;
+   }
+
+   &__ellipse{
+      position: absolute;
+   }
+
+   &__content {
+      padding: 25px;
+      background-color: $white;
+      height: 151px;
+      border-width: 0 1px 1px 1px; 
+      border-color: $gray-300;
+      border-style: solid;
+   }
+
+   &__subtitle {
+      font-size: $fs-20; 
+      font-weight: $fw-700;
+      padding-bottom: 20px;
+      line-height: 20px;
+   }
+
+   &__text {
+      line-height: 22px;
+      &_bold {
+         font-weight: $fw-700;
+      }
+   }
+
+   &__caption {
+      padding-top: 20px;
+      line-height: 22px;
+      color: $gray-500;
+   }
+}
+@media screen and (max-width: 1200px) {
+   .questions{
+      &__row {
+         overflow-x: scroll; 
+         overflow-y: hidden; 
+      }
+   }
+   
+}
+@media screen and (max-width: 576px) {
+   .questions{
+      &__row {
+      gap: 20px;
+      }
+      &__item {
+         width: 300px;
+      }
+   }
+   
+}
+
+.answers {
+   padding: 60px 0 55px;
+   &__content {
+      display: flex;
+      border-radius: 20px;
+      overflow: hidden;
+   }
+
+   &__text {
+      flex: 1 0 60%;
+      font-size: $fs-18;
+      line-height: 30px;
+      padding: 30px;
+      background-color: $gray-200;
+   }
+
+   &__list {
+      margin-bottom: 30px;
+      padding-left: 30px;
+   }
+
+   &__title {
+      font-size: $fs-28;
+      font-weight: $fw-700;
+      line-height: 36px;
+      margin-bottom: 30px;
+   }
+
+   &__photo {
+      flex-shrink: 1;
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;         
+      }
+   }
+
+   &__button {
+      margin: 30px auto 0;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .answers {
+      &__content {
+         flex-direction: column;
+         align-items: center;
+         background-color: $gray-200;
+      }
+      &__text {
+         order: 2;
+      }
+      &__photo {
+         img {
+            border-radius: 20px;
+         }
+      }
+      
+      }
+   }
+
+
+.custom-button {
+   width: 332px;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 35px;
+   background: linear-gradient(135deg, $gr-btn1, $gr-btn2);
+   padding: 0 11px 0 30px;
+   color: $white;
+   font-size: $fs-16;
+   font-weight: $fw-700;
+   box-shadow: 0 10px 20px 0 $btn-shadow;
+
+   &:hover {
+      border: 1px solid $black;
+   }
+
+   &__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $white;
+   }
+}
+@media screen and (max-width: 576px) {
+   .custom-button  {
+      width: 300px;
+      padding: 0 11px 0 15px;
+   }
+}
+
+
+
+
+

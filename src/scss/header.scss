@@ -1,0 +1,184 @@
+
+.header {
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 92px;
+   }
+
+   &__delimeter {
+      width: 1px;
+      height: 100%;
+      background-color: $gray-200;
+   }
+
+   &__contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+   }
+
+   &__short-contacts {
+      display: none; 
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      background-color: $green-500;  
+      cursor: pointer;
+   }
+
+   &__long-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+   }
+
+   &__phone {
+      font-size: $fs-18;
+      font-weight: $fw-700;
+      line-height: 30px;
+   }
+
+   &__callback {
+      border-bottom: 1px dashed;
+      font-size: $fs-14;
+      background-color: transparent;
+   }
+
+   &__icons {
+      a {
+         background-color: transparent;
+      }
+      a:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+}
+
+.location {
+   width: 200px;
+   cursor: pointer;
+   &__title {
+      font-weight: $fw-700;
+      line-height: 22px;
+   }
+
+   &__city {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__delimeter {
+      width: 1px;
+      height: 16px;
+      background-color: $gray-300;
+   }
+
+   &__name {
+      font-weight: $fw-700;
+   }
+
+   &__subname {
+      color: $gray-500;
+   }
+}
+
+.header-btn {
+   display: flex;
+   width: 214px;
+   height: 52px;
+   border: 1px solid $green-500;
+   border-radius: 26px;
+   align-items: center;
+   justify-content: center;
+   background-color: $white;
+   font-size: $fs-14;
+
+   &:hover {
+      border: 1px solid $black;
+   }
+
+   &__letter {
+      font-weight: $fw-400;
+
+      &_big {
+         font-size: $fs-16;
+         font-weight: $fw-700;
+      }
+   }
+
+   &__main-text {
+      margin-left: 10px;
+      font-weight: $fw-600;
+      text-align: start;
+   }
+}
+
+@media screen and (max-width: 1000px) { 
+   .location {
+      width: auto;
+      &__title,
+      &__subname,
+      &__delimeter {
+         display: none;
+      }
+      &__city {
+         justify-content: center;
+      }
+      &__name {
+         margin-left: 10px;
+      }
+   }
+   .header__delimeter {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 850px) { 
+   .header {
+      &__long-contacts {
+         display: none;
+         &.active {
+            display: flex;
+            position: absolute;
+            z-index: 3;
+            top: 76px;
+            right: 20px;
+            background-color: $white;
+            border-radius: 28px;
+            padding: 20px;
+            font-size: 14px;
+            border: 1px solid $green-300;
+            .header__phone {
+               margin-bottom: 10px;
+            }
+         }
+      }
+      &__short-contacts {
+         display: flex;
+      }
+   }
+}
+
+@media screen and (max-width: 700px) { 
+   .location__name {
+      display: none;
+   }
+   .header__logo-link {
+      img {
+         width: 100px;
+         height: auto;
+      }
+      
+   }
+}
+
+@media screen and (max-width: 550px) { 
+   .header__button {
+      display: none;
+   }
+}

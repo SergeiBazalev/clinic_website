@@ -1,0 +1,125 @@
+
+.slide {
+
+   background-color: $gray-200;
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      max-height: 510px;
+
+   }
+
+   &__img {
+      flex: 0 0 40%;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      margin-left: 20px;
+      padding-right: 20px;
+      height: auto;
+   }
+}
+
+.content {
+   flex: 0 0 60%;
+   padding-top: 20px;
+   height: 510px;
+   &__navigation {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+   }
+
+   &__icon {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-image: url('../img/icons/main/home.svg');
+      background-size: 15px 15px;   
+   }
+
+   &__arrow {
+      display: inline-block;
+      width: 6px;
+      height: 10px;
+      background-image: url('../img/icons/main/arrow-right.svg');
+      background-size: 6px 10px;  
+      margin-left: 5px;
+   }
+
+   &__subtext {
+      display: inline-block;
+      margin-left: 5px;
+      color: $gray-500;
+   }
+
+   &__title {
+      font-size: $fs-42;
+      font-weight: $fw-700;
+      line-height: 50px;
+      margin-bottom: 60px;
+   }
+
+   &__text {
+      line-height: 22px;
+      color: $gray-500;
+      margin-bottom: 20px;
+   }
+
+   &__caption {
+      font-style: $italic;
+      line-height: 22px;
+      margin-bottom: 30px;
+   }
+
+   &__button {
+      width: 250px;
+      height: 55px;
+      border: 1px solid $green-500;
+      border-radius: 30px;
+      background-color: $white;
+      font-size: $fs-14;
+      text-transform: uppercase;  
+      &:hover {
+         border: 1px solid $black;
+      }    
+   }
+}
+@media screen and (max-width: 1000px) {
+   .content__title {
+      margin-bottom: 30px;
+   }
+}
+@media screen and (max-width: 767px) { 
+   .slide {
+      &__img {
+         display: none;
+      }      
+      &__container {
+         height: 510px;
+      }
+   }
+   .content {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 20px;
+      height: 100%;
+      &__navigation {
+         margin-bottom: 10px;
+         align-self: start;
+      }
+      &__title {
+         margin-bottom: 20px;
+         font-size: $fs-28;
+         line-height: normal;
+      }
+      &__caption {
+         margin-bottom: 10px;
+      }
+   }
+}
+
