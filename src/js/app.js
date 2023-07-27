@@ -62,12 +62,8 @@ function submitForm(event) {
    subscribeButton.innerText = "Спасибо";
    document.getElementById("email").value = "";
 }
-});
 
-Fancybox.bind("[data-fancybox]", {
-});
-
- var owl = $('.questions__row');
+var owl = $('.questions__row');
  owl.owlCarousel({
    loop:true,
    margin: 30,
@@ -80,10 +76,16 @@ Fancybox.bind("[data-fancybox]", {
  });
  $('.play').on('mousedown',function(){
    owl.trigger('play.owl.autoplay',[1000])
-})
-$('.stop').on('mouseup',function(){
+   });
+   $('.stop').on('mouseup',function(){
    owl.trigger('stop.owl.autoplay')
-})
+   });
+});
+
+Fancybox.bind("[data-fancybox]", {
+});
+
+ 
 
 
   
