@@ -17,6 +17,8 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      text-align: center;
+      white-space: nowrap;
    }
 
    &__button {
@@ -24,6 +26,11 @@
       color: $white;
       padding: 5px 10px;
       cursor: pointer;
+      width: 100%;
+
+      &:not(:last-child) {
+         border-right: 1px solid $gray-900;
+      }
    }
 
    &__delimeter {
